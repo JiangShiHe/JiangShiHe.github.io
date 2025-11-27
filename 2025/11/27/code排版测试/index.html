@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, 拾忆">
-    <meta name="description" content="记录技术与生活">
+    <meta name="keywords" content="code排版测试, 拾忆">
+    <meta name="description" content="这是一个测试内联代码样式的段落。例如，console.log(&amp;#39;Hello&amp;#39;) 是一个内联代码示例，它应该有浅色背景 (#f8f8f8) 和橙色文本 (#e96900)。
+另一个例子：使用 npm install 命令安装依">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签 | 拾忆</title>
+    <title>code排版测试 | 拾忆</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -376,12 +377,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">tags</h1>
+                    <h1 class="description center-align post-title">code排版测试</h1>
                 </div>
             </div>
         </div>
@@ -417,7 +418,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2025-11-26
+                    2025-11-27
                 </div>
                 
 
@@ -438,7 +439,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>这是一个测试内联代码样式的段落。例如，<code>console.log(&#39;Hello&#39;)</code> 是一个内联代码示例，它应该有浅色背景 (#f8f8f8) 和橙色文本 (#e96900)。</p>
+<p>另一个例子：使用 <code>npm install</code> 命令安装依赖，或者使用 <code>hexo generate</code> 生成静态文件。</p>
+<p>下面是一个代码块，它应该有深色背景 (#2d2d2d)：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/usr/bin/env python</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">Flask网关系统启动脚本</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import os</span><br><span class="line">import sys</span><br><span class="line">import argparse</span><br><span class="line">from dotenv import load_dotenv</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def print_banner():</span><br><span class="line">    &quot;&quot;&quot;打印启动横幅&quot;&quot;&quot;</span><br><span class="line">    banner = &quot;&quot;&quot;</span><br><span class="line">╔══════════════════════════════════════════════════════════════╗</span><br><span class="line">║                    Flask网关系统 v1.0                         ║</span><br><span class="line">║                                                              ║</span><br><span class="line">║  统一入口 | 集成管理 | 安全可靠                                ║</span><br><span class="line">╚══════════════════════════════════════════════════════════════╝</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    print(banner)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def check_dependencies():</span><br><span class="line">    &quot;&quot;&quot;检查依赖包&quot;&quot;&quot;</span><br><span class="line">    required_packages = &#123;</span><br><span class="line">        &#x27;flask&#x27;: &#x27;Flask&#x27;,</span><br><span class="line">        &#x27;dotenv&#x27;: &#x27;python-dotenv&#x27;,</span><br><span class="line">        &#x27;werkzeug&#x27;: &#x27;Werkzeug&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    missing_packages = []</span><br><span class="line">    </span><br><span class="line">    for module_name, package_name in required_packages.items():</span><br><span class="line">        try:</span><br><span class="line">            __import__(module_name)</span><br><span class="line">        except ImportError:</span><br><span class="line">            missing_packages.append(package_name)</span><br><span class="line">    </span><br><span class="line">    if missing_packages:</span><br><span class="line">        print(&#x27;❌ 缺少必需的依赖包:&#x27;)</span><br><span class="line">        for package in missing_packages:</span><br><span class="line">            print(f&#x27;   - &#123;package&#125;&#x27;)</span><br><span class="line">        print(&#x27;\n请运行以下命令安装依赖:&#x27;)</span><br><span class="line">        print(&#x27;   pip install -r requirements.txt&#x27;)</span><br><span class="line">        sys.exit(1)</span><br><span class="line">    </span><br><span class="line">    # 检查Python版本</span><br><span class="line">    if sys.version_info &lt; (3, 8):</span><br><span class="line">        print(&#x27;❌ Python版本过低，需要Python 3.8或更高版本&#x27;)</span><br><span class="line">        print(f&#x27;   当前版本: Python &#123;sys.version_info.major&#125;.&#123;sys.version_info.minor&#125;&#x27;)</span><br><span class="line">        sys.exit(1)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def load_environment():</span><br><span class="line">    &quot;&quot;&quot;加载环境变量&quot;&quot;&quot;</span><br><span class="line">    # 只加载网关自己的配置</span><br><span class="line">    # 子应用的配置由子应用自己在加载时处理，避免环境变量冲突</span><br><span class="line">    env_file = &#x27;.env&#x27;</span><br><span class="line">    if os.path.exists(env_file):</span><br><span class="line">        print(f&#x27;✓ 加载网关配置: &#123;env_file&#125;&#x27;)</span><br><span class="line">        load_dotenv(env_file)</span><br><span class="line">    else:</span><br><span class="line">        print(f&#x27;⚠ 未找到配置文件: &#123;env_file&#125;，使用默认配置&#x27;)</span><br><span class="line">    </span><br><span class="line">    # 动态检查所有子应用的配置文件（仅提示，不加载）</span><br><span class="line">    from app.config import Config</span><br><span class="line">    parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))</span><br><span class="line">    </span><br><span class="line">    print(&#x27;\n检查子应用配置文件:&#x27;)</span><br><span class="line">    </span><br><span class="line">    for app_config in Config.SUB_APPS:</span><br><span class="line">        app_name = app_config[&#x27;name&#x27;]</span><br><span class="line">        app_path = app_config[&#x27;path&#x27;]</span><br><span class="line">        </span><br><span class="line">        # 计算实际路径</span><br><span class="line">        if not os.path.isabs(app_path):</span><br><span class="line">            app_path = os.path.join(parent_dir, app_path)</span><br><span class="line">        </span><br><span class="line">        # 尝试查找配置文件（按优先级）</span><br><span class="line">        possible_env_files = [&#x27;.env&#x27;, &#x27;.env.dev&#x27;, &#x27;.env.local&#x27;, &#x27;.env.example&#x27;]</span><br><span class="line">        env_found = False</span><br><span class="line">        </span><br><span class="line">        for env_file_name in possible_env_files:</span><br><span class="line">            env_path = os.path.join(app_path, env_file_name)</span><br><span class="line">            if os.path.exists(env_path):</span><br><span class="line">                print(f&#x27;  ✓ &#123;app_name&#125;: &#123;env_path&#125;&#x27;)</span><br><span class="line">                env_found = True</span><br><span class="line">                break</span><br><span class="line">        </span><br><span class="line">        if not env_found:</span><br><span class="line">            print(f&#x27;  ⚠ &#123;app_name&#125;: 未找到配置文件 (&#123;app_path&#125;)&#x27;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def parse_args():</span><br><span class="line">    &quot;&quot;&quot;解析命令行参数&quot;&quot;&quot;</span><br><span class="line">    parser = argparse.ArgumentParser(description=&#x27;Flask网关系统&#x27;)</span><br><span class="line">    parser.add_argument(&#x27;--host&#x27;, &#x27;-H&#x27;,</span><br><span class="line">                       default=os.environ.get(&#x27;GATEWAY_HOST&#x27;, &#x27;127.0.0.1&#x27;),</span><br><span class="line">                       help=&#x27;服务主机 (默认: 127.0.0.1)&#x27;)</span><br><span class="line">    parser.add_argument(&#x27;--port&#x27;, &#x27;-p&#x27;, type=int,</span><br><span class="line">                       default=int(os.environ.get(&#x27;GATEWAY_PORT&#x27;, 8000)),</span><br><span class="line">                       help=&#x27;服务端口 (默认: 8000)&#x27;)</span><br><span class="line">    parser.add_argument(&#x27;--config&#x27;, &#x27;-c&#x27;,</span><br><span class="line">                       choices=[&#x27;development&#x27;, &#x27;production&#x27;, &#x27;testing&#x27;, &#x27;default&#x27;],</span><br><span class="line">                       default=os.environ.get(&#x27;FLASK_CONFIG&#x27;, &#x27;development&#x27;),</span><br><span class="line">                       help=&#x27;配置环境 (默认: development)&#x27;)</span><br><span class="line">    parser.add_argument(&#x27;--debug&#x27;, &#x27;-d&#x27;, action=&#x27;store_true&#x27;,</span><br><span class="line">                       help=&#x27;启用调试模式&#x27;)</span><br><span class="line">    </span><br><span class="line">    return parser.parse_args()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    &quot;&quot;&quot;主函数&quot;&quot;&quot;</span><br><span class="line">    # 打印横幅</span><br><span class="line">    print_banner()</span><br><span class="line">    </span><br><span class="line">    # 检查依赖</span><br><span class="line">    print(&#x27;正在检查依赖...&#x27;)</span><br><span class="line">    check_dependencies()</span><br><span class="line">    print(&#x27;✓ 依赖检查通过\n&#x27;)</span><br><span class="line">    </span><br><span class="line">    # 添加当前目录到Python路径</span><br><span class="line">    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))</span><br><span class="line">    </span><br><span class="line">    # 加载环境变量</span><br><span class="line">    print(&#x27;正在加载配置...&#x27;)</span><br><span class="line">    load_environment()</span><br><span class="line">    print()</span><br><span class="line">    </span><br><span class="line">    # 解析命令行参数</span><br><span class="line">    args = parse_args()</span><br><span class="line">    </span><br><span class="line">    # 更新环境变量</span><br><span class="line">    os.environ[&#x27;FLASK_CONFIG&#x27;] = args.config</span><br><span class="line">    os.environ[&#x27;GATEWAY_HOST&#x27;] = args.host</span><br><span class="line">    os.environ[&#x27;GATEWAY_PORT&#x27;] = str(args.port)</span><br><span class="line">    </span><br><span class="line">    try:</span><br><span class="line">        # 导入应用</span><br><span class="line">        from app import create_app</span><br><span class="line">        </span><br><span class="line">        # 创建应用</span><br><span class="line">        print(f&#x27;正在创建应用实例 (配置: &#123;args.config&#125;)...&#x27;)</span><br><span class="line">        app = create_app(args.config)</span><br><span class="line">        print(&#x27;✓ 应用创建成功\n&#x27;)</span><br><span class="line">        </span><br><span class="line">        # 显示已注册的子应用</span><br><span class="line">        if hasattr(app, &#x27;_sub_apps&#x27;) and app._sub_apps:</span><br><span class="line">            print(&#x27;已注册的子应用:&#x27;)</span><br><span class="line">            for url_prefix in app._sub_apps.keys():</span><br><span class="line">                print(f&#x27;  - &#123;url_prefix&#125;&#x27;)</span><br><span class="line">            print()</span><br><span class="line">        </span><br><span class="line">        # 启动应用</span><br><span class="line">        debug_mode = args.debug or args.config in [&#x27;development&#x27;, &#x27;default&#x27;]</span><br><span class="line">        </span><br><span class="line">        print(&#x27;=&#x27; * 60)</span><br><span class="line">        print(f&#x27;🚀 Flask网关系统启动成功!&#x27;)</span><br><span class="line">        print(f&#x27;📊 配置环境: &#123;args.config&#125;&#x27;)</span><br><span class="line">        print(f&#x27;🌐 访问地址: http://&#123;args.host&#125;:&#123;args.port&#125;&#x27;)</span><br><span class="line">        print(f&#x27;🔧 调试模式: &#123;&quot;开启&quot; if debug_mode else &quot;关闭&quot;&#125;&#x27;)</span><br><span class="line">        print(&#x27;=&#x27; * 60)</span><br><span class="line">        print(&#x27;\n按 Ctrl+C 停止服务器\n&#x27;)</span><br><span class="line">        </span><br><span class="line">        app.run(</span><br><span class="line">            host=args.host,</span><br><span class="line">            port=args.port,</span><br><span class="line">            debug=debug_mode,</span><br><span class="line">            use_reloader=debug_mode</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">    except KeyboardInterrupt:</span><br><span class="line">        print(&#x27;\n\n正在关闭服务器...&#x27;)</span><br><span class="line">        print(&#x27;✓ 服务器已关闭&#x27;)</span><br><span class="line">        sys.exit(0)</span><br><span class="line">    except Exception as e:</span><br><span class="line">        print(f&#x27;\n❌ 启动失败: &#123;str(e)&#125;&#x27;)</span><br><span class="line">        import traceback</span><br><span class="line">        traceback.print_exc()</span><br><span class="line">        sys.exit(1)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    main()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
                 
             </div>
             <hr/>
@@ -464,7 +470,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blog.ynbet.top/tags/index.html">https://blog.ynbet.top/tags/index.html</a>
+                    <a href="https://blog.ynbet.top/2025/11/27/code%E6%8E%92%E7%89%88%E6%B5%8B%E8%AF%95/">https://blog.ynbet.top/2025/11/27/code%E6%8E%92%E7%89%88%E6%B5%8B%E8%AF%95/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -547,13 +553,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/tags/index.html">
+                <a href="/2025/11/27/code%E6%8E%92%E7%89%88%E6%B5%8B%E8%AF%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="tags">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="code排版测试">
                         
-                        <span class="card-title">tags</span>
+                        <span class="card-title">code排版测试</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -564,7 +570,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-11-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-11-27
                             </span>
                         <span class="publish-author">
                             
@@ -582,16 +588,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/tags/index.html">
+                <a href="/2025/11/26/hexo%E6%95%99%E7%A8%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="tags">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="hexo教程">
                         
-                        <span class="card-title">tags</span>
+                        <span class="card-title">hexo教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -612,7 +618,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

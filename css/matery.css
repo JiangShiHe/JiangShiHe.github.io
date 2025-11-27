@@ -102,7 +102,7 @@ blockquote {
 
 pre {
     padding: 2rem 1rem 1rem 3rem !important;
-    border-radius: 0.35rem;
+    border-radius: 0.65rem;
     tab-size: 4;
 }
 
@@ -1141,15 +1141,37 @@ article .article-tags .chip {
 }
 
 #artDetail .reprint {
-    margin: 15px 0 0.4rem;
-    padding: 0.5rem 0.8rem;
-    border: 1px solid #eee;
-    line-height: 2;
-    transition: box-shadow 0.3s ease-in-out
+    margin: 20px 0;  /* 增加上下间距 */
+    padding: 1rem;   /* 增加内边距 */
+    border: 2px solid #eee;
+    border-radius: 8px; /* 添加圆角 */
+    line-height: 1.5; /* 调整行高 */
+    transition: box-shadow 0.3s ease-in-out;
+    display: flex;   /* 使用 flex 布局 */
+    flex-direction: column; /* 垂直排列子元素 */
+}
+
+#artDetail .reprint__author,
+#artDetail .reprint__type,
+#artDetail .reprint__notice {
+    display: flex;          /* 每个部分水平排列 */
+    align-items: right;    /* 对齐 */
+    margin-bottom: 8px;    /* 部分间距 */
+}
+
+#artDetail .reprint-meta {
+    /*width: 3em;          固定图标宽度，确保一致 */
+    text-align: left;   /* 图标对齐 */
+    /*display: inline-block;  强制块级行为 */
+    white-space: nowrap;     /* 防止 meta 换行 */
+    margin-right: 6px;     /* 增加 meta 和 info 间距，防止重叠 */
+    font-weight: bold;
+    min-width: 100px;       /* 设置最小宽度，确保空间 */
 }
 
 #artDetail .reprint-info {
-    word-break: break-word;
+    word-break: break-word;	/* 长单词或链接可换行，避免溢出 */
+    flex: 1;                /* 占满剩余空间 */
 }
 
 #artDetail .reprint:hover {
@@ -1157,9 +1179,9 @@ article .article-tags .chip {
 }
 
 #artDetail .reprint a {
-    font-size: 1.05rem;
-    color: #42b983;
-    font-weight: 500;
+    font-size: 1.05rem;		/* 字体大小 */
+    color: #42b983;			/* 字体颜色 */
+    font-weight: 500;		/* 字体粗细 */
 }
 
 #articleContent p {
